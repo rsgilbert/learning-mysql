@@ -1,0 +1,33 @@
+// CONCAT
+MariaDB [fredo]> SELECT CONCAT(name, SPACE(1), email) FROM drivers;
+MariaDB [fredo]> SELECT CONCAT_WS('=>', name, nin_number) FROM drivers;
+
+// IFNULL
+SELECT IFNULL(NULL, '<blank>');
+
+// UPPER 
+MariaDB [fredo]> SELECT UPPER(name) capitalizedNames FROM drivers;
+
+// LOWER 
+MariaDB [fredo]> SELECT LOWER(name) AS lowercase_name FROM drivers;
+
+// QUOTE 
+MariaDB [fredo]> SELECT QUOTE("I'm a first & last lady!") AS stmt;
+
+// RTRIM
+MariaDB [fredo]> SELECT RTRIM('     hi there    ') AS greeting;
+
+// LTRIM 
+MariaDB [fredo]> SELECT LTRIM('     hi there    ') AS greeting;
+
+// TRIM 
+MariaDB [fredo]> SELECT TRIM('     hi there    ') AS greeting;
+MariaDB [fredo]> SELECT TRIM(BOTH 'x' FROM 'xxxhi dearxx,how are youxxxxx');
+// or 
+MariaDB [fredo]> SELECT TRIM('x' FROM 'xxxhi dearxx,how are youxxxxx');
+
+// RPAD 
+MariaDB [fredo]> SELECT RPAD(name, 13, '#') FROM drivers;
+
+// LPAD 
+MariaDB [fredo]> SELECT LPAD(name, 10, '0') FROM drivers;

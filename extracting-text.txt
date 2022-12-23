@@ -1,0 +1,19 @@
+// RIGHT 
+MariaDB [fredo]> SELECT RIGHT(email, 3) FROM drivers;
+
+// LEFT 
+MariaDB [fredo]> SELECT LEFT(email, 1) AS initial FROM drivers;
+
+// MID 
+MariaDB [fredo]> SELECT name, MID(name, 2,3) FROM drivers;
+
+// SUBSTRING 
+ SELECT name, SUBSTRING(name, 2) FROM drivers;
+
+// SUBSTRING_INDEX 
+// (1) content before separating symbol 
+MariaDB [fredo]> SELECT email, SUBSTRING_INDEX(email, '@', 1) FROM drivers; 
+// (-1) content after separating symbol 
+MariaDB [fredo]> SELECT email, SUBSTRING_INDEX(email, '@', -1) FROM drivers;
+
+

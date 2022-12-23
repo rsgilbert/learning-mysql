@@ -1,0 +1,15 @@
+// LOCATE 
+MariaDB [fredo]> SELECT email, LOCATE('@gmail.com', email) FROM drivers;
+
+// POSITION 
+MariaDB [fredo]> SELECT email, POSITION('@' IN email) FROM drivers;
+
+// FIND_IN_SET 
+SELECT FIND_IN_SET('ssenyonjogilbert@gmail.com', email) FROM drivers;
+MariaDB [fredo]> SELECT FIND_IN_SET('Dyson', name) FROM farmers;
+
+// CHAR_LENGTH 
+MariaDB [fredo]> SELECT name, CHAR_LENGTH(name) AS name_length FROM farmers;
+
+
+
